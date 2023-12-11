@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+
+
+
+
+
+.Container{
+    z-index: 50;
+    .dropdown {
+        display: none;
+    }
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    color:white;
+    .LogoHome{
+        font-size: 25px;
+        margin:10px;
+    }
+    .opcaoMenu{
+        font-size: 35px;
+        width: 40%;
+        height: 100%;
+        justify-content: space-around;
+        align-items:center;
+        display: flex;
+        flex-direction: row;
+        :hover{
+            color: rgb(202, 202, 202);
+            cursor:pointer;
+        }
+    }
+}
+
+
+@media (max-width: 650px) {
+    .Container{
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .LogoHome{
+            font-size: 12px;
+            margin:10px;
+        }
+        .opcaoMenu{
+            :hover{
+                color:#FF7A00;
+            }
+        }
+        .icone{
+            margin-top: 10px;
+        }
+        
+        .dropdown-content {
+            overflow:hidden ;
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            text-align: center;
+            .botaoCor{
+                background-color: white;
+                border-bottom: 2px solid black;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+            .botaoUm{
+                width: 100%;
+            }
+        }
+    
+        .dropdown:hover .dropdown-content {
+            display: flex;
+            flex-direction: column;
+        }
+        .opcaoMenu{
+            .opcaoUm{
+             display: none;
+            }
+            .opcaoDois{
+             display: none;
+            }
+            .opcaoTres{
+             display: none;
+            }
+         }
+    }
+  
+  }

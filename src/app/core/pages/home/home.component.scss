@@ -1,0 +1,425 @@
+.container {
+    width: 100%;
+    height: 100%;
+    .CabecalhoContainer {
+        .imagemLogo {
+            width: 100%;
+            height: 500px;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('https://swapps.com/wp-content/uploads/2022/09/Banner-1024x533.png');
+        }
+
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .cabecalhoBody {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 25px;
+            p {
+                color: white;
+                font-size: 50px;
+                border-radius: 20px;
+                padding: 10px 20px 10px 20px;
+                text-align: center;
+
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+        }
+
+
+    }
+
+
+    .CardContainer {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 500px;
+        background-color: white;
+
+        .cardBody {
+            font-family: 'Jomhuria';
+            font-size: 25px;
+        }
+
+        .CardUmContainer {
+            box-shadow: -5px 5px 15px #888888;
+            margin-top: 150px;
+            background-color: #B2B2B2;
+            width: 30%;
+            padding: 40px;
+            border-radius: 20px;
+
+            .cardTitle {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+        }
+
+        .CardDoisContainer {
+            box-shadow: -5px 5px 15px #888888;
+            position: relative;
+            left: 25px;
+            background-color: #445B70;
+            width: 30%;
+            padding: 60px;
+            border-radius: 20px;
+            margin-bottom: 150px;
+
+            .cardTitle {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            strong {
+                color: #FF7A00;
+            }
+        }
+    }
+
+    .carroselContainer {
+        background-color: black;
+        width: 100%;
+        color: white;
+        margin-top: 80px;
+        min-height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .botaoProjetos{
+            border:2px solid #FF7A00;
+            margin-top: 20px;
+            padding: 10px 50px 10px 50px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+            transition-duration: 0.4s;
+
+            background-color: white;
+        }
+        .botaoProjetos:hover{
+            background-color: #FF7A00;
+            color: white;
+        }
+        .carroselCabecalho {
+ 
+            text-align: center;
+            h1 {
+                margin-bottom: 25px;
+                font-size: 50px;
+
+                strong {
+                    color: #FF7A00;
+                }
+            }
+            p {
+                width: 50%;
+                margin: auto;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .carroselSlideContainer{
+        width: 100%;
+        height: 100%;
+        min-height: 50px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 50px;
+    }
+    .carroselSlide{
+        margin-top: 5px;
+        width: 100%;
+        height: 100%;
+        max-width: 600px;
+        max-height:600px;
+        display: flex;
+        transform-style: preserve-3d;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        input[type=radio]{
+            display: none;
+        }
+        .card{
+            position: absolute;
+            width: 60%;
+            height: 100%;
+            left: 0;
+            right:0;
+            margin: auto;
+            cursor: pointer;
+            transition:transform 0.4s ease;
+        }
+        .cards{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 500px;
+            
+        }
+        img{
+         width: 100%;
+         min-height: 450px;
+         min-width: 250px;
+         height: 100%;
+         border: 10px;
+         object-fit: cover;     
+         border-radius: 10px;
+        }
+
+        #item-1:checked ~ .cards #song-3,
+        #item-2:checked ~ .cards #song-1,
+        #item-3:checked ~ .cards #song-2{
+           transform: translateX(-40%) scale(0.8);
+           opacity: 0.4;
+           z-index: 0; 
+        }
+        #item-1:checked ~ .cards #song-2,
+        #item-2:checked ~ .cards #song-3,
+        #item-3:checked ~ .cards #song-1{
+           transform: translateX(40%) scale(0.8);
+           opacity: 0.4;
+           z-index: 0; 
+        }
+        #item-1:checked ~ .cards #song-1,
+        #item-2:checked ~ .cards #song-2,
+        #item-3:checked ~ .cards #song-3{
+           transform: translateX(0) scale(1);
+           opacity: 1;
+           z-index: 1; 
+        }
+
+        #item-1:checked ~ .cards #song-1 img,
+        #item-2:checked ~ .cards #song-2 img,
+        #item-3:checked ~ .cards #song-3 img{
+          box-shadow: 0px 0px 5px 0px rgba(81,81,81,0.47);
+        }
+
+    }
+
+}
+
+
+
+@media (max-width: 650px) {
+    .container {
+        width: 100%;
+        height: 100%;
+
+        .CabecalhoContainer {
+            .imagemLogo {
+                width: 100%;
+                height: 500px;
+                background-position: center top;
+                background-image: url('https://swapps.com/wp-content/uploads/2022/09/Banner-1024x533.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .cabecalhoBody {
+                h1 {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .CardContainer {
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 250px;
+            flex-direction: column;
+            background-color: white;
+
+            .CardUmContainer {
+                position: initial;
+                box-shadow: -5px 5px 15px #888888;
+                h1 {
+                    text-align: center;
+                }
+
+                width: 60%;
+                height: 40%;
+                border-radius: 10px;
+                padding: 30px;
+                margin: 10px;
+            }
+
+            .CardDoisContainer {
+                box-shadow: -5px 5px 15px #888888;
+                position: initial;
+                margin-bottom: 0px;
+
+                h1 {
+                    text-align: center;
+                }
+
+                width: 60%;
+                height: 40%;
+                border-radius: 10px;
+                padding: 30px;
+            }
+
+            display: flex;
+            flex-direction: column;
+        }
+        .carroselContainer {
+            background-color: black;
+            width: 100%;
+            color: white;
+            margin-top: 90px;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .carroselCabecalho {
+                text-align: center;
+    
+                h1 {
+                    margin-bottom: 25px;
+                    font-size: 40px;
+    
+                    strong {
+                        color: #FF7A00;
+                    }
+                }
+    
+                p {
+                    width: 80%;
+                    margin: auto;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media (min-width: 650px) and (max-width: 1200px) {
+    .container {
+        width: 100%;
+        height: 100%;
+
+        .CabecalhoContainer {
+            .imagemLogo {
+                max-width: 100%;
+                height: 500px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center top;
+                background-image: url('https://swapps.com/wp-content/uploads/2022/09/Banner-1024x533.png');
+            }
+
+            .cabecalhoBody {
+                h1 {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .CardContainer {
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 250px;
+            flex-direction: column;
+            background-color: white;
+
+            .CardUmContainer {
+                box-shadow: -5px 5px 15px #888888;
+                position: initial;
+
+                h1 {
+                    text-align: center;
+                }
+
+                width: 60%;
+                height: 40%;
+                border-radius: 10px;
+                padding: 30px;
+                margin: 10px;
+            }
+
+            .CardDoisContainer {
+                box-shadow: -5px 5px 15px #888888;
+                box-shadow: 5px 5px 10px #888888;
+                position: initial;
+                margin-bottom: 0px;
+
+                h1 {
+                    text-align: center;
+                }
+
+                width: 60%;
+                height: 40%;
+                border-radius: 10px;
+                padding: 30px;
+            }
+
+            display: flex;
+            flex-direction: column;
+        }
+        .carroselContainer {
+            background-color: black;
+            width: 100%;
+            color: white;
+            margin-top: 90px;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            .carroselCabecalho {
+                text-align: center;
+    
+                h1 {
+                    margin-bottom: 25px;
+                    font-size: 40px;
+    
+                    strong {
+                        color: #FF7A00;
+                    }
+                }
+    
+                p {
+                    width: 80%;
+                    margin: auto;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
